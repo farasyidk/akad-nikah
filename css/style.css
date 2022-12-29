@@ -2239,6 +2239,14 @@ a:focus {
   padding: 50px 55px;
 }
 
+.wedding-couple-section h4 {
+  text-align: center;
+}
+
+.wedding-couple-section p {
+  text-align: center;
+}
+
 @media screen and (min-width: 992px) {
   .wedding-couple-section .details {
     display: table;
@@ -2268,9 +2276,8 @@ a:focus {
   font-size: 26px;
   font-size: 1.44444rem;
   font-weight: 600;
-  color: #fff;
+  color: #3e3e3e;
   margin: 0 0 0.7em;
-  text-transform: uppercase;
 }
 
 @media (max-width: 1199px) {
@@ -2284,7 +2291,6 @@ a:focus {
   .wedding-couple-section .details h3 {
     font-size: 20px;
     font-size: 1.11111rem;
-    color: #3d3d3d;
   }
 }
 
@@ -2847,7 +2853,7 @@ a:focus {
 }
 
 .events-section .event .details {
-  width: 50%;
+  width: 60%;
   float: left;
   padding-left: 35px;
 }
@@ -4071,26 +4077,5 @@ a:focus {
 .blog-details-content .comment-respond .comment-form .submit-btn button {
   border-radius: 0;
 }
-
-/* custom theme */
-
-#fh5co-couple .amp-center {
-  font-size: 90px;
-  margin-top: 100%;
-  color: #f69d9d;
-}
-
-@media screen and (max-width: 768px) {
-  #fh5co-couple .amp-center {
-    font-size: 70px;
-  }
-}
-
-.img-rounded {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-}
-/* end custom theme */
 
 /*# sourceMappingURL=style.css.map */
