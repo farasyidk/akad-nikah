@@ -590,16 +590,14 @@
             iconPause = $(".fa-pause");
         let musicBox = document.getElementById("music-background");
 
-        iconPlay.hide();
-        musicBtn.on("click", function() {
-            if (musicBox.paused) {
-                musicBox.play();
-            } else {
-                musicBox.pause();
-            }
+        if (musicBox.paused) {
+            iconPause.hide();
+        } else {
+            iconPlay.hide();
+        }
 
-            iconPlay.toggle();
-            iconPause.toggle();
+        musicBtn.on("click", function() {
+            musicPlay();
 
             return false;
         });
@@ -720,8 +718,35 @@
 
             smoothScrolling($("#navbar > ul > li > a[href^='#']"), $(".header-style-1 .navigation").innerHeight());
 
+            document.addEventListener('click', musicPlay);
+
+            $('html, body').css({
+                overflow: 'hidden',
+                height: '100%'
+            });
         });
 
+        function musicPlay() {
+            let iconPlay = $(".fa-play"),
+                iconPause = $(".fa-pause");
+            let musicBox = document.getElementById("music-background");
+
+            document.removeEventListener('click', musicPlay);
+
+            if (musicBox.paused) {
+                musicBox.play();
+            } else {
+                musicBox.pause();
+            }
+
+            iconPlay.toggle();
+            iconPause.toggle();
+
+            $('html, body').css({
+                overflow: 'auto',
+                height: 'auto'
+            });
+        }
 
 
     /*==========================================================================
