@@ -2027,7 +2027,7 @@ a:focus {
 #0.5	footer
 --------------------------------------------------------------*/
 .site-footer {
-  background: url("../images/story/indoor-3.jpg") center center/cover no-repeat local;
+  background: url("../images/slider/slide-3-crop.png") center center/cover no-repeat local;
   text-align: center;
   color: #fff;
   padding: 160px 0;
@@ -2857,7 +2857,7 @@ a:focus {
 }
 
 .events-section .event .details {
-  width: 60%;
+  width: 50%;
   float: left;
   padding-left: 35px;
 }
@@ -3498,6 +3498,13 @@ a:focus {
   margin: 0 0 0.8em;
 }
 
+.getting-there-section .content h2 {
+  font-weight: 600;
+  margin: 0 0 0.8em;
+  color: #fff;
+  text-align: center;
+}
+
 @media (max-width: 1199px) {
   .getting-there-section .content h3 {
     font-size: 22px;
@@ -3516,7 +3523,7 @@ a:focus {
   .getting-there-section .content > .col:first-child {
     padding-right: 75px;
     text-align: right;
-    border-right: 1px solid #548a7f;
+    /* border-right: 1px solid #548a7f; */
   }
 }
 

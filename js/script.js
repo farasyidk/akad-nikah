@@ -602,7 +602,7 @@
             iconPause.toggle();
 
             return false;
-        })
+        });
     }
 
 
