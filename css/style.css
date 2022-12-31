@@ -2087,29 +2087,22 @@ a:focus {
   top: 0;
 }
 
-.site-footer h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 67px;
-  font-size: 3.72222rem;
+.site-footer p {
+  font-size: 1.7rem;
   color: #fff;
   margin: 0 0 0.3em;
-  padding: 0 250px;
   text-transform: capitalize;
   letter-spacing: 5px;
 }
 
 @media (max-width: 1199px) {
-  .site-footer h2 {
-    font-size: 55px;
-    font-size: 3.05556rem;
-    padding: 0 200px;
+  .site-footer p {
+    font-size: 1.05556rem;
   }
 }
 
 @media (max-width: 991px) {
-  .site-footer h2 {
-    font-size: 45px;
-    font-size: 2.5rem;
+  .site-footer p {
     padding: 0;
   }
 }
@@ -3520,7 +3513,6 @@ a:focus {
   font-size: 25px;
   font-size: 1.38889rem;
   font-weight: 600;
-  margin: 0 0 0.8em;
 }
 
 .getting-there-section .content h2 {
@@ -3530,10 +3522,19 @@ a:focus {
   text-align: center;
 }
 
+.getting-there-section .content .location {
+  text-align: center;
+  margin-top: 20px;
+}
+
 @media (max-width: 1199px) {
   .getting-there-section .content h3 {
     font-size: 22px;
     font-size: 1.22222rem;
+  }
+
+  .getting-there-section .content .location {
+    text-align: left;
   }
 }
 
@@ -3546,14 +3547,18 @@ a:focus {
 
 @media screen and (min-width: 992px) {
   .getting-there-section .content > .col:first-child {
-    padding-right: 75px;
+    padding-right: 60px;
     text-align: right;
     /* border-right: 1px solid #548a7f; */
+  }
+
+  .getting-there-section .content .location {
+    text-align: center;
   }
 }
 
 @media (max-width: 991px) {
-  .getting-there-section .content > .col:first-child {
+  .getting-there-section .content > .col {
     padding-bottom: 35px;
     margin-bottom: 35px;
     border-bottom: 1px solid #548a7f;
@@ -3562,7 +3567,7 @@ a:focus {
 
 @media screen and (min-width: 992px) {
   .getting-there-section .content > .col:last-child {
-    padding-left: 75px;
+    padding-left: 60px;
   }
 }
 
