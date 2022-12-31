@@ -3361,6 +3361,12 @@ a:focus {
 .rsvp-section .content p {
   color: #fff;
   margin: 0.5em 0 2em;
+  text-align: center;
+}
+
+.rsvp-section .content h3 {
+  color: #fff;
+  text-align: center;
 }
 
 .rsvp-section .form ::-webkit-input-placeholder {

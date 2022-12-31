@@ -425,6 +425,52 @@
         </section>
         <!-- end rsvp-section -->
 
+        <!-- start rsvp-section -->
+        <section class="rsvp-section section-padding parallax" data-bg-image="images/rsvp-bg.jpg" data-speed="7" id="rsvp">
+          <div class="container">
+              <div class="row">
+                  <div class="col col-xs-12">
+                      <div class="section-title-white">
+                          <div class="vertical-line"><span><i class="fi flaticon-two"></i></span></div>
+                          <h2>Join our party</h2>
+                      </div>
+                  </div>
+              </div> <!-- end section-title -->
+
+              <div class="row content">
+                  <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                      <h3>Ucapkan Sesuatu</h3>
+                      <p>Berikan ucapan & Do'a restu</p>
+                      <form id="rsvp-form" class="form validate-rsvp-form row" method="post">
+                          <div class="col col-sm-12">
+                              <input type="text" name="name" id="name" class="form-control" placeholder="Nama Kamu*">
+                          </div>
+                          <div class="col col-sm-12">
+                              <select class="form-control" id="events" name="events" >
+                                  <option disabled selected>Konfirmasi Kehadiran</option>
+                                  <option id="hadir">Hadir</option>
+                                  <option id="tidak hadir">Tidak Hadir</option>
+                                  <option id="masih ragu">Masih Ragu</option>
+                              </select>
+                          </div>
+                          <div class="col col-sm-12">
+                              <textarea class="form-control" id="notes" name="notes" placeholder="Ucapan"></textarea>
+                          </div>
+                          <div class="col col-sm-12 submit-btn">
+                              <button type="submit" class="submit">Kirim Ucapan</button>
+                              <span id="loader"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></span>
+                          </div>
+                          <div class="col col-md-12 success-error-message">
+                              <div id="success">Terimakasih</div>
+                              <div id="error"> Gagal, silakan coba lagi. </div>
+                          </div>
+                      </form>
+                  </div>
+              </div> <!-- end row -->
+          </div> <!-- end container -->
+      </section>
+      <!-- end rsvp-section -->
+
 
         <!-- start gift-registration-section -->
         <section class="gift-registration-section section-padding">

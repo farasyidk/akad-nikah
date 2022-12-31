@@ -1,11 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getDatabase, ref, set } from "firebase/database";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAN4nIg7qFHO-jhdRZnA8JDO8vr_du5-pA",
   authDomain: "akad-nikah-ce8b6.firebaseapp.com",
@@ -18,4 +14,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// Initialize Realtime Database and get a reference to the service
+const db = getDatabase(app);
+
+function writeGuestData(name, greet, confirmation) {
+  const todayDate = new Date().toISOString();
+
+  set(ref(db, 'guest/' + todayDate), {
+    name: name,
+    greet: greet,
+    confirmation : confirmation
+  });
+}

@@ -533,11 +533,6 @@
                     required: true,
                     minlength: 2
                 },
-                email: "required",
-
-                guest: {
-                    required: true
-                },
 
                 events: {
                     required: true
@@ -546,34 +541,42 @@
             },
 
             messages: {
-                name: "Please enter your name",
-                email: "Please enter your email",
-                guest: "Select your number of guest",
-                events: "Select your event list"
+                name: "Masukkan nama anda",
+                events: "Pilih konfirmasi kehadiran anda"
             },
 
             submitHandler: function (form) {
                 $("#loader").css("display", "inline-block");
-                $.ajax({
-                    type: "POST",
-                    url: "mail.php",
-                    data: $(form).serialize(),
-                    success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
-                        }, 3000);
-                        form.reset();
-                    },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
-                        }, 3000);
-                    }
-                });
+                writeGuestData($('#name').val(), $('#events option:selected').text(), $('#notes').val())
+
+                setTimeout(() => {
+                    $( "#loader").hide();
+                    $( "#success").slideDown( "slow" );
+                    setTimeout(function() {
+                    $( "#success").slideUp( "slow" );
+                    }, 3000);
+                    form.reset();
+                }, 4000);
+                // $.ajax({
+                //     type: "POST",
+                //     url: "mail.php",
+                //     data: $(form).serialize(),
+                //     success: function () {
+                //         $( "#loader").hide();
+                //         $( "#success").slideDown( "slow" );
+                //         setTimeout(function() {
+                //         $( "#success").slideUp( "slow" );
+                //         }, 3000);
+                //         form.reset();
+                //     },
+                //     error: function() {
+                //         $( "#loader").hide();
+                //         $( "#error").slideDown( "slow" );
+                //         setTimeout(function() {
+                //         $( "#error").slideUp( "slow" );
+                //         }, 3000);
+                //     }
+                // });
                 return false; // required to block normal submit since you used ajax
             }
 
